@@ -1,15 +1,26 @@
-console.log("se cargo el js correctamente")
-$(function () {
+console.log("se cargo el js correctamente");
 
-    statetext(false)
+// Esperar a que el HTML cargue por completo
+document.addEventListener("DOMContentLoaded", function () {
+    // Ocultar el texto al iniciar
+    statetext(false);
+    
+    // Asignar el evento click al botón
+    const btn = document.getElementById("btninfo");
+    if (btn) {
+        btn.addEventListener("click", function () {
+            statetext(true);
+        });
+    }
 });
+
 function statetext(state) {
-    if (state) {
-        $("#text-example").show();
-    } else {
-        $("#text-example").hide();
+    const texto = document.getElementById("text-example");
+    if (texto) {
+        if (state) {
+            texto.style.display = "block"; // Equivalente a $("#text-example").show()
+        } else {
+            texto.style.display = "none";  // Equivalente a $("#text-example").hide()
+        }
     }
 }
-$(document).on("click", "#btninfo", function () {
-    statetext(true)
-})
