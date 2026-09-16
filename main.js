@@ -1,15 +1,16 @@
 $(function () {
-    stateImg(false)
+    statetext(false)
 });
 
-function stateImg(state) {
+
+function statetext(state) {
     if (state) {
-        $("#img-test").show();
+        $("#text-example").show();
     } else {
-        $("#img-test").hide();
+        $("#text-example").hide();
     }
 }
 
 $(document).on("click", "#btninfo", function () {
-    stateImg(true)
+    statetext(true)
 })
