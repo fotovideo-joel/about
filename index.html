@@ -1,93 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>J</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./bootstrap.css">
-    <script src="./main.js"></script>
-    <!-- <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="./favicon.ico"> -->
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  </head>
+    <head>
+        <meta charset="UTF-8">
+        <!-- auto refresh en env debug -->
+        <meta http-equiv="refresh" content="5">
+        <title>J</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./bootstrap.css">
+        <script src="./main.js"></script>
+        <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    </head>
     <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./index.html">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04"
-                    aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarColor04">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./galeria.html">GALERIA
-                                <span class="visually-hidden">(current)</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
         
-
-        <!-- Esta es la sección principal que cambiará de fondo -->
-        <section id="apple-section" class="interactive-section proporcion-contenido-completa">
-        
-            <!-- Contenedor central para alinear el contenido -->
+        <section id="apple-section" class="interactive-section">
+            
             <div class="content-wrapper">
-        
-                <!-- Controles de flechas (Opcional) -->
-                <div class="arrow-controls">
-                    <button id="btn-up" class="arrow-btn">↑</button>
-                    <button id="btn-down" class="arrow-btn">↓</button>
-                </div>
-        
-                <!-- Columna Izquierda: El Menú Acordeón -->
                 <div class="menu-column">
-        
-                    <!-- Item 1 (Empieza Activo) -->
                     <div class="menu-item active" data-index="0">
-                        <h3 class="item-title">▶ Primer Título</h3>
+                        <h3 class="item-title">Acabados</h3>
                         <div class="item-desc">
-                            <p>Esta es la descripción del primer elemento. Al hacer clic, el contenedor crece para mostrar este
-                                texto, el fondo cambia y la imagen de la derecha se actualiza.</p>
+                            <p>
+                                Texto descriptivo sobre los acabados. La burbuja se expande hacia abajo suavemente.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero eveniet aliquid quo debitis, velit deserunt tempora omnis voluptatibus architecto. Aut.
+                            </p>
+                            <div class="gp-btn-see-more">
+                                <button type="button" class="btn btn-primary btn-sm">ver mas</button>
+                                <button type="button" class="btn btn-secondary btn-sm">ver mas</button>
+                            </div>
                         </div>
                     </div>
-        
-                    <!-- Item 2 -->
                     <div class="menu-item" data-index="1">
-                        <h3 class="item-title">▶ Segundo Título</h3>
+                        <h3 class="item-title">Sistema de registro</h3>
                         <div class="item-desc">
-                            <p>Descripción del segundo elemento. Nota cómo se desliza suavemente y los demás se cierran
-                                automáticamente.</p>
+                            <p>Detalles sobre el sistema de registro de datos de salud integrados en el dispositivo.</p>
                         </div>
                     </div>
-        
-                    <!-- Item 3 -->
                     <div class="menu-item" data-index="2">
-                        <h3 class="item-title">▶ Tercer Título</h3>
+                        <h3 class="item-title">Resistencia al agua</h3>
                         <div class="item-desc">
-                            <p>Y aquí va el texto del tercer elemento. Puedes agregar todos los que quieras siguiendo esta
-                                estructura.</p>
+                            <p>Ideal para nadar en una piscina o en el mar hasta 6 metros de profundidad. Protección
+                                completa.</p>
                         </div>
                     </div>
-        
                 </div>
-        
-                <!-- Columna Derecha: Visual (Imagen o Carrusel) -->
-                <div class="visual-column">
-                    <!-- Aquí pusimos una imagen de prueba, pero luego puede ser tu carrusel -->
-                    <img id="display-image" src="https://picsum.photos/id/1015/600/400" alt="Imagen dinámica">
-                </div>
-        
             </div>
+
+            <!-- <div class="foot-image">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam?
+            </div> -->
         </section>
-
-
-
-        <footer>
+        <!-- <footer>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam?</p>
-        </footer>
+        </footer> -->
     </body>
 </html>

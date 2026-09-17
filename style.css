@@ -3,126 +3,113 @@ html, body {
     margin: 0;
 }
 body {
-    background-color: #f5f5f7;
+    /* background-color: #f5f5f7; */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-/* .section1{
+/* .proporcion-contenido-completa {
     flex: 1;
 } */
-.proporcion-contenido-completa{
-    flex: 1;
-}
+
 /* -------------------------------------- */
 
-
-/* Configuración de la sección principal */
+/* Sección a pantalla completa con fondo de imagen */
 .interactive-section {
-  width: 100%;
-  min-height: 80vh; /* Ocupa al menos el 80% de la pantalla */
-  background-color: #f5f5f7; /* Color por defecto */
-  transition: background-color 0.5s ease; /* Transición suave de fondo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
+    width: 100%;
+    min-height: 100vh;
+    /* Configuraciones clave para la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.4s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Alinea el menú a la izquierda */
+    padding: 40px 2%;
+    /* Margen lateral */
 }
 
 .content-wrapper {
-  display: flex;
-  max-width: 1200px;
-  width: 100%;
-  gap: 40px;
-  position: relative;
+    /* background-color: azure; */
+    /* padding: 1%; */
+
+    display: flex;
+    max-width: 600px;
+    /* Limitamos el ancho del menú */
+    width: 100%;
+    gap: 20px;
 }
 
-/* Flechas */
-.arrow-controls {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  margin-right: 20px;
+.foot-image {
+    background-color: aquamarine;
 }
-.arrow-btn {
-  background: transparent;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.arrow-btn:hover { background: #e0e0e0; }
 
-/* Columna Menú (Izquierda) */
+/* Menú: Burbujas estilo cristal */
 .menu-column {
-  flex: 1; /* Ocupa la mitad del espacio */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
 }
-
 .menu-item {
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 12px;
-  padding: 15px 20px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
+    background: rgba(40, 40, 40, 0.65);
+    /* Fondo oscuro translúcido */
+    backdrop-filter: blur(10px);
+    /* Efecto de vidrio borroso detrás */
+    border-radius: 30px;
+    /* Bordes muy redondeados (forma de píldora) */
+    padding: 15px 25px;
+    cursor: pointer;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
 }
 .menu-item:hover {
-  background: rgba(255, 255, 255, 0.8);
+    background: rgba(60, 60, 60, 0.8);
 }
-
 .item-title {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #333;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: whitesmoke;
 }
-
-/* El truco del acordeón: ocultar la descripción por defecto */
+/* Descripción oculta */
 .item-desc {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.3s ease;
 }
-
-/* Estilos de la descripción cuando el item está ACTIVO */
+.gp-btn-see-more {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2%;
+}
+/* Cuando el item está activo */
 .menu-item.active {
-  background: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-.menu-item.active .item-desc {
-  max-height: 200px; /* Espacio suficiente para el texto */
-  opacity: 1;
-  margin-top: 15px;
+    background: rgba(30, 30, 30, 0.85);
+    border-radius: 20px;
+    /* Se vuelve un poco más cuadrado al expandirse */
 }
 
-/* Columna Visual (Derecha) */
-.visual-column {
-  flex: 1; /* Ocupa la otra mitad */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.visual-column img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: opacity 0.3s ease;
+.menu-item.active .item-desc {
+    max-height: 250px;
+    opacity: 1;
+    margin-top: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #e5e5e5;
 }
 
 /* -------------------------------------- */
-.container-image{
+.container-image {
     background-color: darkgrey;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -132,8 +119,34 @@ body {
 
 /* -------------------------------------- */
 footer {
-  /* Tus estilos para el footer */
-  background-color: #333;
-  color: white;
-  padding: 20px;
+    /* Tus estilos para el footer */
+    background-color: whitesmoke;
+    /* background-color: rgba(0, 255, 255, 0.233); */
+    height: 100%;
+    color: black;
+    padding: 20px;
+    border: none;
+    /* border-top-color: whitesmoke;
+    border-top-width: 1px;
+    border-top-style: solid; */
+}
+
+/* Para pantallas menores a 768px (Tablets y Celulares) */
+@media (max-width: 768px) {
+  .interactive-section {
+    align-items: flex-end; /* Empuja el menú hacia abajo */
+    padding: 20px 15px;    /* Reduce los márgenes laterales */
+  }
+
+  .content-wrapper {
+    max-width: 100%;       /* Ocupa todo el ancho disponible */
+  }
+
+  .menu-item {
+    padding: 12px 20px;    /* Reduce un poco el tamaño de las burbujas */
+  }
+
+  .item-title {
+    font-size: 1rem;       /* Achica un poco el texto del título */
+  }
 }
