@@ -132,7 +132,7 @@ footer {
 }
 
 /* Para pantallas menores a 768px (Tablets y Celulares) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .interactive-section {
     align-items: flex-end; /* Empuja el menú hacia abajo */
     padding: 20px 15px;    /* Reduce los márgenes laterales */
