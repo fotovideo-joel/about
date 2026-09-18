@@ -9,23 +9,19 @@ body {
 }
 /* -------------------------------------- */
 .interactive-section {
-    /* background-color: rgba(127, 255, 212, 0.336); */
-
     width: 100%;
     min-height: 100vh;
     /* Configuraciones clave para la imagen de fondo */
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    transition: background-image 0.4s ease-in-out;
-
+    background-position: 0.5s ease;
+    transition: background-image 1s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
 }
 
 .content-wrapper {
-    /* background-color: rgba(73, 214, 132, 0.363); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,8 +42,6 @@ body {
 
 /* Menú: Burbujas estilo cristal */
 .menu-column {
-    /* background-color: burlywood; */
-
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -92,7 +86,6 @@ body {
     border-radius: 20px;
     /* Se vuelve un poco más cuadrado al expandirse */
 }
-
 .menu-item.active .item-desc {
     max-height: 250px;
     opacity: 1;
@@ -113,35 +106,31 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-
 }
 .gp-img-socialmedia{
     background-color: aqua;
     padding: 1%;
     width: fit-content;
 }
-
 .gp-img-socialmedia img{
     width: 10%;
     height: fit-content;
-
 }
-
 /* -------------------------------------- */
 /* Para pantallas menores a 768px (Tablets y Celulares) */
 @media (max-width: 768px) {
   .interactive-section {
-    align-items: flex-end; /* Empuja el menú hacia abajo */
+    align-items: flex-end;
   }
   .content-wrapper {
-    align-items: flex-end; /* Empuja el menú hacia abajo */
-    max-width: 100%;       /* Ocupa todo el ancho disponible */
+    align-items: flex-end;
+    max-width: 100%;
     padding: 0 1% 5% 1%;
   }
   .gp-foot{
     text-align: center;
   }
   .item-title {
-    font-size: 1rem;       /* Achica un poco el texto del título */
+    font-size: 1rem;
   }
 }

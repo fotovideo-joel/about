@@ -1,78 +1,104 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
-  // 1. Tus datos (Esto podría venir de un JSON o una API en el futuro)
+  // 1. Datos actualizados: Arreglos de imágenes y posición focal
   const menuData = [
-      { 
-        title: "ACABADOS", 
-        desc: "Texto descriptivo sobre los acabados. La burbuja se expande hacia abajo suavemente.", 
-        bgImage: "https://picsum.photos/id/1015/1920/1080" 
-      },
-      { 
-        title: "SISTEMA DE REGISTRO", 
-        desc: "Detalles sobre el sistema de registro de datos de salud integrados.", 
-        bgImage: "./files/image1.jpg" 
-      },
-      { 
-        title: "REDES SOCIALES", 
-        desc: `aaa`, 
-        bgImage: "https://picsum.photos/id/1025/1920/1080" 
-      }
+    {
+      title: "ACABADOS",
+      desc: "Texto descriptivo sobre los acabados. La burbuja se expande hacia abajo suavemente.",
+      // Agregas varias imágenes aquí:
+      bgImages: [
+        "https://picsum.photos/id/1015/1920/1080",
+        "./files/image1.jpg",
+        "https://picsum.photos/id/1016/1920/1080",
+      ],
+      // position: "center", "right", "left", o porcentajes "70% 50%"
+      bgPosition: "left center",
+    },
+    {
+      title: "SISTEMA DE REGISTRO",
+      desc: "Detalles sobre el sistema de registro de datos de salud integrados.",
+      bgImages: [
+        "https://picsum.photos/id/1018/1920/1080",
+        "https://picsum.photos/id/1019/1920/1080",
+        "https://picsum.photos/id/1020/1920/1080",
+      ],
+      bgPosition: "center",
+    },
+    {
+      title: "REDES SOCIALES",
+      desc: "Conecta conmigo en mis redes o revisa mis proyectos en GitHub.",
+      bgImages: ["https://picsum.photos/id/1025/1920/1080", "https://picsum.photos/id/1026/1920/1080"],
+      bgPosition: "bottom right",
+    },
   ];
-  
 
-// <a class="text-example-enlace" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/">Visita este sitio web</a>
-// desc: `<div class="gp-img-socialmedia"> <img class="img-test" src="./files/image-ig.png"> </div>`, 
   const section = document.getElementById("apple-section");
   const menuContainer = document.getElementById("menu-container");
-  let currentIndex = 0;
 
-  // 2. Renderizar el HTML dinámicamente
+  let currentIndex = 0;
+  let carouselInterval; // Variable para controlar el temporizador del carrusel
+  let currentImageIndex = 0; // Índice de la imagen actual dentro del carrusel
+
+  // 2. Renderizar el HTML (Igual que antes)
   function renderMenu() {
-      // Creamos un string con todo el HTML recorriendo el arreglo menuData
-      const htmlString = menuData.map((item, index) => {
-          // El primer elemento (index 0) empieza con la clase 'active'
-          const isActive = index === 0 ? "active" : "";
-          return `
+    const htmlString = menuData
+      .map((item, index) => {
+        const isActive = index === 0 ? "active" : "";
+        return `
             <div class="menu-item ${isActive}" data-index="${index}">
               <h3 class="item-title">${item.title}</h3>
               <div class="item-desc">
                 <p>${item.desc}</p>
-                <!-- Aquí puedes agregar tus botones de 'VER MÁS' si los necesitas -->
               </div>
             </div>
           `;
-      }).join(""); // Unimos todos los elementos sin comas
-
-      // Inyectamos el HTML en el contenedor
-      menuContainer.innerHTML = htmlString;
+      })
+      .join("");
+    menuContainer.innerHTML = htmlString;
   }
 
-  // 3. Función para actualizar la vista (Fondo y clases activas)
+  // 3. Función actualizada con Carrusel y Encuadre
   function updateView(index) {
-      const items = document.querySelectorAll(".menu-item"); // Seleccionamos los items recién creados
-      if (index < 0 || index >= items.length) return;
-      
-      currentIndex = index;
+    const items = document.querySelectorAll(".menu-item");
+    if (index < 0 || index >= items.length) return;
 
-      // Actualizar clases activas
-      items.forEach(item => item.classList.remove("active"));
-      items[currentIndex].classList.add("active");
+    currentIndex = index;
+    const currentData = menuData[currentIndex];
 
-      // Cambiar imagen de fondo
-      section.style.backgroundImage = `url('${menuData[currentIndex].bgImage}')`;
+    // Actualizar clases activas del menú
+    items.forEach((item) => item.classList.remove("active"));
+    items[currentIndex].classList.add("active");
+
+    // Resetear el carrusel al cambiar de tarjeta
+    clearInterval(carouselInterval);
+    currentImageIndex = 0;
+
+    // Aplicar primera imagen y el encuadre (posición) específico de esta sección
+    section.style.backgroundImage = `url('${currentData.bgImages[0]}')`;
+    section.style.backgroundPosition = currentData.bgPosition;
+
+    // Si hay más de una imagen, iniciar el temporizador
+    if (currentData.bgImages.length > 1) {
+      carouselInterval = setInterval(() => {
+        // Avanzar a la siguiente imagen, y si llega al final, volver a 0
+        currentImageIndex = (currentImageIndex + 1) % currentData.bgImages.length;
+        section.style.backgroundImage = `url('${currentData.bgImages[currentImageIndex]}')`;
+      }, 4000); // 4000 milisegundos = cambia cada 4 segundos
+    }
   }
 
-  // 4. Inicializar todo
-  renderMenu(); // Primero creamos los elementos en el HTML
-  updateView(0); // Establecemos el primer fondo
+  // 4. Inicializar
+  renderMenu();
+  updateView(0);
 
-  // 5. Asignar los eventos de clic a los items que acabamos de crear
+  // 5. Asignar clics
   const generatedItems = document.querySelectorAll(".menu-item");
   generatedItems.forEach((item) => {
-      item.addEventListener("click", function () {
-          const index = parseInt(this.getAttribute("data-index"));
-          updateView(index);
-      });
+    item.addEventListener("click", function () {
+      const index = parseInt(this.getAttribute("data-index"));
+      // Solo actualizar si el usuario hizo clic en una tarjeta distinta
+      if (index !== currentIndex) {
+        updateView(index);
+      }
+    });
   });
-
 });
