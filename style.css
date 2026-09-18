@@ -14,8 +14,10 @@ body {
 
 /* -------------------------------------- */
 
-/* Sección a pantalla completa con fondo de imagen */
+
 .interactive-section {
+    /* background-color: rgba(127, 255, 212, 0.336); */
+
     width: 100%;
     min-height: 100vh;
     /* Configuraciones clave para la imagen de fondo */
@@ -25,30 +27,35 @@ body {
     transition: background-image 0.4s ease-in-out;
 
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* Alinea el menú a la izquierda */
-    padding: 40px 2%;
-    /* Margen lateral */
+    flex-direction: column;
+    align-items:flex-start;
 }
 
 .content-wrapper {
-    /* background-color: azure; */
-    /* padding: 1%; */
-
+    /* background-color: rgba(73, 214, 132, 0.363); */
+    padding: 0 0 0 2%;
     display: flex;
-    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    height: 100%;
     /* Limitamos el ancho del menú */
     width: 100%;
     gap: 20px;
 }
 
-.foot-image {
-    background-color: aquamarine;
+.gp-foot {
+    background: rgba(60, 60, 60, 0.400);
+    color: rgba(245, 245, 245, 0.700);
+    width: 100%;
+    height: fit-content;
+    text-align: end;
 }
 
 /* Menú: Burbujas estilo cristal */
 .menu-column {
+    /* background-color: burlywood; */
+
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -64,7 +71,6 @@ body {
     padding: 15px 25px;
     cursor: pointer;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
 }
 .menu-item:hover {
@@ -104,7 +110,9 @@ body {
     line-height: 1.5;
     color: #e5e5e5;
 }
-
+.text-example-enlace{
+    color: whitesmoke;
+}
 /* -------------------------------------- */
 .container-image {
     background-color: darkgrey;
@@ -114,6 +122,17 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
+
+}
+.gp-img-socialmedia{
+    background-color: aqua;
+    padding: 1%;
+    width: fit-content;
+}
+
+.gp-img-socialmedia img{
+    width: 10%;
+    height: fit-content;
 
 }
 
@@ -134,17 +153,20 @@ footer {
 /* Para pantallas menores a 768px (Tablets y Celulares) */
 @media (max-width: 768px) {
   .interactive-section {
+
     align-items: flex-end; /* Empuja el menú hacia abajo */
-    padding: 20px 15px;    /* Reduce los márgenes laterales */
   }
 
   .content-wrapper {
+    /* background-color: rgba(0, 255, 255, 0.315); */
     max-width: 100%;       /* Ocupa todo el ancho disponible */
+    align-items: flex-end; /* Empuja el menú hacia abajo */
+    padding: 0 1% 5% 1%;
   }
 
-  .menu-item {
-    padding: 12px 20px;    /* Reduce un poco el tamaño de las burbujas */
-  }
+  /* .menu-item {
+    background-color: antiquewhite;
+  } */
 
   .item-title {
     font-size: 1rem;       /* Achica un poco el texto del título */
