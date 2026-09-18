@@ -97,8 +97,48 @@ body {
 .text-example-enlace{
     color: whitesmoke;
 }
+
+
 /* -------------------------------------- */
-.container-image {
+
+
+/* Contenedor de los botones inyectados */
+.action-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+    padding: .5%;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Si la pantalla es pequeña, se apilan ordenados */
+}
+
+/* El diseño del botón en sí */
+.dynamic-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f0f0f09c;
+    backdrop-filter: blur(10px);
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    /* Quita la raya de enlace */
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+/* Efecto al pasar el mouse por el botón */
+.dynamic-btn:hover {
+    background: rgba(245, 245, 245, 0.830);
+    backdrop-filter: blur(10px);
+    transform: scale(1.05);
+    /* Se agranda un poquito */
+}
+
+
+/* .container-image {
     background-color: darkgrey;
     display: flex;
     flex-direction: column;
@@ -115,12 +155,35 @@ body {
 .gp-img-socialmedia img{
     width: 10%;
     height: fit-content;
+} */
+
+/* Estilo para el Badge de "NUEVO" */
+.badge {
+  background-color: #ff3b30; /* Rojo vibrante estilo iOS */
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-left: 10px;
+  vertical-align: middle;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(255, 59, 48, 0.4);
+  /* Opcional: una pequeña animación de pulso */
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 /* -------------------------------------- */
 /* Para pantallas menores a 768px (Tablets y Celulares) */
 @media (max-width: 768px) {
   .interactive-section {
     align-items: flex-end;
+    background-position: center;
   }
   .content-wrapper {
     align-items: flex-end;
