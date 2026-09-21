@@ -63,7 +63,13 @@ body {
     background: rgba(60, 60, 60, 0.8);
 }
 .item-title {
-    margin: 0;
+    /* background-color: rgba(127, 255, 212, 0.582); */
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    gap: 1%;
+}
+.item-title h3{
     font-size: 1.1rem;
     font-weight: 500;
     color: whitesmoke;
@@ -100,8 +106,6 @@ body {
 
 
 /* -------------------------------------- */
-
-
 /* Contenedor de los botones inyectados */
 .action-buttons {
     display: flex;
@@ -112,7 +116,6 @@ body {
     gap: 10px;
     /* Si la pantalla es pequeña, se apilan ordenados */
 }
-
 /* El diseño del botón en sí */
 .dynamic-btn {
     display: inline-flex;
@@ -136,27 +139,7 @@ body {
     transform: scale(1.05);
     /* Se agranda un poquito */
 }
-
-
-/* .container-image {
-    background-color: darkgrey;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-.gp-img-socialmedia{
-    background-color: aqua;
-    padding: 1%;
-    width: fit-content;
-}
-.gp-img-socialmedia img{
-    width: 10%;
-    height: fit-content;
-} */
-
+/* -------------------------------------- */
 /* Estilo para el Badge de "NUEVO" */
 .badge {
   background-color: #ff3b30; /* Rojo vibrante estilo iOS */
@@ -169,15 +152,16 @@ body {
   vertical-align: middle;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 5px rgba(255, 59, 48, 0.4);
-  /* Opcional: una pequeña animación de pulso */
-  animation: pulse 2s infinite;
-}
 
-@keyframes pulse {
+  height: fit-content;
+  /* Opcional: una pequeña animación de pulso */
+  /* animation: pulse 2s infinite; */
+}
+/* @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
   100% { transform: scale(1); }
-}
+} */
 /* -------------------------------------- */
 /* Para pantallas menores a 768px (Tablets y Celulares) */
 @media (max-width: 768px) {

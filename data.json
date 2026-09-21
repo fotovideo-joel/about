@@ -22,10 +22,9 @@
       "https://picsum.photos/id/1026/1920/1080"
     ],
     "bgPosition": "bottom right",
-    "expiraEl": "2026-10-01",
+    "expiraEl": "2026-10-17",
     "links": [
-      { "text": "LinkedIn", "url": "https://www.linkedin.com/in/willy-joel-chirinos-1a3409128/", "icon": "💼" },
-      { "text": "GitHub", "url": "https://github.com/wchirinos123", "icon": "💻" }
+      { "text": "Youtube", "url": "https://www.youtube.com/", "icon": "" }
     ]
   }
 ]
