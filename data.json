@@ -31,7 +31,10 @@
     ],
     "bgPosition": "center",
     "expiraEl": "2026-10-24",
-    "links": []
+    "links": [
+      { "text": "Youtube", "url": "https://www.youtube.com/", "icon": "" },
+      { "text": "Facebook", "url": "https://www.facebook.com/", "icon": "" }
+    ]
   },
   {
     "title": "REDES Y CONTACTO",
@@ -43,8 +46,6 @@
     ],
     "bgPosition": "bottom right",
     "expiraEl": "0000-00-00",
-    "links": [
-      { "text": "Youtube", "url": "https://www.youtube.com/", "icon": "" }
-    ]
+    "links": []
   }
 ]
