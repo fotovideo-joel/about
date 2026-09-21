@@ -108,8 +108,6 @@ body {
 .text-example-enlace{
     color: whitesmoke;
 }
-
-
 /* -------------------------------------- */
 /* Contenedor de los botones inyectados */
 .action-buttons {
@@ -121,6 +119,12 @@ body {
     gap: 10px;
     /* Si la pantalla es pequeña, se apilan ordenados */
 }
+
+.action-buttons img {
+    width: 5%;
+    height: fit-content;
+}
+
 /* El diseño del botón en sí */
 .dynamic-btn {
     display: inline-flex;
@@ -133,16 +137,12 @@ body {
     border-radius: 20px;
     text-decoration: none;
     /* Quita la raya de enlace */
-    font-weight: 500;
-    font-size: 0.9rem;
     transition: all 0.2s ease;
 }
 /* Efecto al pasar el mouse por el botón */
 .dynamic-btn:hover {
     background: rgba(245, 245, 245, 0.830);
     backdrop-filter: blur(10px);
-    transform: scale(1.05);
-    /* Se agranda un poquito */
 }
 /* -------------------------------------- */
 /* Estilo para el Badge de "NUEVO" */
@@ -157,16 +157,41 @@ body {
   vertical-align: middle;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 5px rgba(255, 59, 48, 0.4);
-
   height: fit-content;
-  /* Opcional: una pequeña animación de pulso */
-  /* animation: pulse 2s infinite; */
 }
-/* @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-} */
+/* -------------------------------------- */
+/* form add event */
+/* -------------------------------------- */
+
+.bg-section{
+    /* background-color: rgba(106, 160, 161, 0.411); */
+    background-image: url('./files/image1.jpg');
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    /* Configuraciones clave para la imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0.5s ease;
+    transition: background-image 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.gp-form {
+    /* background-color: darkcyan; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 100%;
+    padding: 0 1% 0 1%;
+    gap: 20px;
+}
+
+
 /* -------------------------------------- */
 /* Para pantallas menores a 768px (Tablets y Celulares) */
 @media (max-width: 768px) {

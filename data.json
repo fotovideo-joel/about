@@ -29,11 +29,10 @@
         "https://picsum.photos/id/1018/1920/1080",
         "https://picsum.photos/id/1028/1920/1080"
     ],
-    "bgPosition": "center",
-    "expiraEl": "2026-10-24",
+    "bgPosition": "bottom right",
     "links": [
-      { "text": "Youtube", "url": "https://www.youtube.com/", "icon": "" },
-      { "text": "Facebook", "url": "https://www.facebook.com/", "icon": "" }
+      { "text": "Title test example", "url": "https://www.youtube.com/", "icon": "./files/icoYoutube.png", "expiraEl": "2026-10-22" },
+      { "text": "Title test example", "url": "https://www.youtube.com/", "icon": "./files/icoYoutube.png", "expiraEl": "2026-10-25" }
     ]
   },
   {
