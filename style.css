@@ -20,7 +20,6 @@ body {
     flex-direction: column;
     align-items:flex-start;
 }
-
 .content-wrapper {
     display: flex;
     justify-content: center;
@@ -30,7 +29,6 @@ body {
     padding: 0 0 0 2%;
     gap: 20px;
 }
-
 .gp-foot {
     background: rgba(60, 60, 60, 0.400);
     backdrop-filter: blur(10px);
@@ -39,7 +37,6 @@ body {
     height: fit-content;
     text-align: center;
 }
-
 /* Menú: Burbujas estilo cristal */
 .menu-column {
     display: flex;
@@ -63,7 +60,6 @@ body {
     background: rgba(60, 60, 60, 0.8);
 }
 .item-title {
-    /* background-color: rgba(127, 255, 212, 0.582); */
     display: flex;
     flex-direction: row;
     height: fit-content;
@@ -81,11 +77,9 @@ body {
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.3s ease;
 }
-
 .item-desc p {
     text-align: justify;
 }
-
 .gp-btn-see-more {
     display: flex;
     flex-direction: row-reverse;
@@ -119,12 +113,10 @@ body {
     gap: 10px;
     /* Si la pantalla es pequeña, se apilan ordenados */
 }
-
 .action-buttons img {
     width: 5%;
     height: fit-content;
 }
-
 /* El diseño del botón en sí */
 .dynamic-btn {
     display: inline-flex;
@@ -159,12 +151,7 @@ body {
   box-shadow: 0 2px 5px rgba(255, 59, 48, 0.4);
   height: fit-content;
 }
-/* -------------------------------------- */
-/* form add event */
-/* -------------------------------------- */
-
 .bg-section{
-    /* background-color: rgba(106, 160, 161, 0.411); */
     background-image: url('./files/image1.jpg');
     background-position: center;
     width: 100%;
@@ -178,9 +165,7 @@ body {
     flex-direction: column;
     align-items:flex-start;
 }
-
 .gp-form {
-    /* background-color: darkcyan; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -190,8 +175,6 @@ body {
     padding: 0 1% 0 1%;
     gap: 20px;
 }
-
-
 /* -------------------------------------- */
 /* Para pantallas menores a 768px (Tablets y Celulares) */
 @media (max-width: 768px) {

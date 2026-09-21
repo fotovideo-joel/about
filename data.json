@@ -31,8 +31,8 @@
     ],
     "bgPosition": "bottom right",
     "links": [
-      { "text": "Title test example", "url": "https://www.youtube.com/", "icon": "./files/icoYoutube.png", "expiraEl": "2026-10-22" },
-      { "text": "Title test example", "url": "https://www.youtube.com/", "icon": "./files/icoYoutube.png", "expiraEl": "2026-10-25" }
+      { "text": "Title test example", "url": "https://www.youtube.com/", "icon": "./files/icons/youtube.png", "expiraEl": "2026-10-22" },
+      { "text": "Title test example", "url": "https://www.youtube.com/", "icon": "./files/icons/ig.png", "expiraEl": "2026-10-25" }
     ]
   },
   {

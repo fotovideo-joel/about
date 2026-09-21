@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
     let carouselInterval;
     let currentImageIndex = 0;
-    
     // 1. FUNCIÓN PARA CARGAR EL JSON
     async function cargarDatos() {
         try {
