@@ -2,16 +2,35 @@
   {
     "title": "ACABADOS",
     "desc": "Texto descriptivo sobre los acabados de diseño.",
-    "bgImages": ["https://picsum.photos/id/1015/1920/1080"],
+    "bgImages": [
+        "https://picsum.photos/id/1015/1920/1080",
+        "https://picsum.photos/id/1016/1920/1080",
+        "https://picsum.photos/id/1029/1920/1080"        
+    ],
     "bgPosition": "right center",
-    "expiraEl": "2026-09-20", 
+    "expiraEl": "0000-00-00", 
     "links": []
   },
   {
-    "title": "UNIVERSIDAD Y PROYECTOS",
+    "title": "Lorem ipsum dolor sit amet",
     "desc": "Estudiante en UNAJ. Formulación de proyectos y diagnóstico de unidades productivas.",
-    "bgImages": ["https://picsum.photos/id/1018/1920/1080"],
+    "bgImages": [
+        "https://picsum.photos/id/1018/1920/1080",
+        "https://picsum.photos/id/1028/1920/1080"
+    ],
     "bgPosition": "center",
+    "expiraEl": "0000-00-00",
+    "links": []
+  },
+  {
+    "title": "TRANSMISIONES",
+    "desc": "las seciones en transmisiones se realizan de forma programada y privada",
+    "bgImages": [
+        "https://picsum.photos/id/1018/1920/1080",
+        "https://picsum.photos/id/1028/1920/1080"
+    ],
+    "bgPosition": "center",
+    "expiraEl": "2026-10-24",
     "links": []
   },
   {
@@ -19,10 +38,11 @@
     "desc": "Conecta conmigo en mis redes profesionales o revisa mi código.",
     "bgImages": [
       "https://picsum.photos/id/1025/1920/1080",
-      "https://picsum.photos/id/1026/1920/1080"
+      "https://picsum.photos/id/1026/1920/1080",
+      "https://picsum.photos/id/1027/1920/1080"
     ],
     "bgPosition": "bottom right",
-    "expiraEl": "2026-10-17",
+    "expiraEl": "0000-00-00",
     "links": [
       { "text": "Youtube", "url": "https://www.youtube.com/", "icon": "" }
     ]
