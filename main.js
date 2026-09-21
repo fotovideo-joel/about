@@ -5,43 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
     let carouselInterval;
     let currentImageIndex = 0;
-    const menuData_example = [
-      {
-        title: "ACABADOS",
-        desc: "Texto descriptivo sobre los acabados de diseño.",
-        bgImages: [
-          "https://picsum.photos/id/1015/1920/1080",
-          "https://picsum.photos/id/1016/1920/1080",
-          "https://picsum.photos/id/1017/1920/1080",
-        ],
-        bgPosition: "right center",
-        links: [], // Si una sección no tiene botones, lo dejamos vacío
-      },
-      {
-        title: "OTROS",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aperiam ad repudiandae corporis aliquid. Inventore magnam dicta exercitationem debitis voluptate.",
-        bgImages: ["https://picsum.photos/id/1018/1920/1080", "https://picsum.photos/id/1019/1920/1080"],
-        bgPosition: "center",
-        links: [],
-      },
-      {
-        title: "REDES Y CONTACTO",
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati aperiam ad repudiandae corporis aliquid. Inventore magnam dicta exercitationem debitis voluptate.",
-        bgImages: [
-          "https://picsum.photos/id/1025/1920/1080",
-          "https://picsum.photos/id/1026/1920/1080",
-          "https://picsum.photos/id/1027/1920/1080",
-          "https://picsum.photos/id/1028/1920/1080",
-        ],
-        bgPosition: "bottom right",
-        // Aquí inyectamos los botones
-        links: [
-          { text: "Evento 1", url: "https://www.youtube.com/", icon: "./files/icoYoutube.png", expiraEl: "2026-09-22" },
-          { text: "Evento 2", url: "https://www.youtube.com/", icon: "./files/icoYoutube.png", expiraEl: "2026-09-22" },
-        ],
-      },
-    ];
-
+    
     // 1. FUNCIÓN PARA CARGAR EL JSON
     async function cargarDatos() {
         try {
@@ -123,8 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 </div>
             `;
-        }).join("");
-        
+        }).join("");        
         menuContainer.innerHTML = htmlString;
     }
 
